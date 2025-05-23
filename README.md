@@ -15,23 +15,9 @@ The main goals of this project include:
 
 The system consists of multiple components, including:
 
-- **Load Balancer**: Distributes HTTP traffic across the instances of the API service. It listens on port 9999.
-- **API Services**: Multiple instances of the API service run behind the load balancer to handle client requests.
+- **API Service**: API service run  to handle client requests.
 - **Database**: A relational database for storing client data, transactions, and balance information.
 
-```mermaid
-flowchart TD
-    subgraph Application
-        LB(Load Balancer) -.-> API1(API - 01)
-        LB -.-> API2(API - 02)
-        LB -.-> APIddd(API - ...)
-        LB -.-> APIX(API - XX)
-        API1 -.-> Db[(Database)]
-        API2 -.-> Db[(Database)]
-        APIddd -.-> Db[(Database)]
-        APIX -.-> Db[(Database)]
-    end
-```
 
 ## Functional Requirements 
 
@@ -42,8 +28,7 @@ flowchart TD
 - **Scala**: The main programming language used to build the API.
 - **Akka**: A toolkit for building highly concurrent, distributed, and resilient message-driven systems.
 - **Docker**: Used for containerization and ensuring consistent environments.
-- **Database**: **_TBD_**.
-- **Load Balancer**: **_TBD_**.
+- **Database**: Cassandra
 
 ## Constraints
 
